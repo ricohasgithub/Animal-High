@@ -1,22 +1,13 @@
 
 import pygame
+
 from random import randrange
 
+from utils.utils import *
+from utils.button import Point
+from utils.button import Button
+
 pygame.init()
-
-def render_image(window, img_path, point):
-    img = pygame.image.load(img_path)
-    window.blit(img, (point.x, point.y))
-
-def render_text(window, text, point):
-
-    font = pygame.font.SysFont("arial", 20)
-    text = font.render(text, True, (0, 0, 0))
-
-    text_rect = text.get_rect()
-    text_rect.center = (point.x, point.y)
-
-    window.blit(text, text_rect)
 
 if __name__ == "__main__":
     print("Hello world")
